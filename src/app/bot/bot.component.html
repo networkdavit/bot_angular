@@ -1,0 +1,16 @@
+<div class="bot_position rectangle center_bot_text">
+    <h3>{{greeting}}</h3>
+    <h5>Are you interested in?</h5>
+    <mat-form-field appearance="fill" class="select_field">
+        <mat-label>Select an option</mat-label>
+        <mat-select  [(value)]="selected" >
+          <mat-option (click)="test()">None</mat-option>
+          <mat-option (click)="test()" value="Hotels">Hotels</mat-option>
+          <mat-option (click)="test()" value="Adventures">Adventures</mat-option>
+          <mat-option (click)="test()" value="Contact">Contact</mat-option>
+        </mat-select >
+      </mat-form-field>
+      
+      <p>You selected: {{selected}}</p>
+</div>
+  

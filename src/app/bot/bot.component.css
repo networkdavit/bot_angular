@@ -1,0 +1,28 @@
+.bot_position {
+    margin-left:75%;
+    margin-top: 35%;
+  }
+
+.select_field{
+    width: 300px;
+}
+
+.center_bot_text{
+    text-align: center;
+}
+
+.rectangle {
+    width: 300px;
+    height: 350px;
+    border: 2px solid black;
+    box-shadow: 1px 1px black,
+                2px 2px black,
+                3px 3px black,
+                4px 4px black,
+                5px 5px black,
+                6px 6px black,
+                7px 7px black,
+                8px 8px black,
+                9px 9px black,
+                10px 10px black;
+}
