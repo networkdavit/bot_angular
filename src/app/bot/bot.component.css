@@ -1,6 +1,7 @@
 .bot_position {
     margin-left:75%;
-    margin-top: 35%;
+    margin-top: 15%;
+    font-size: large;
   }
 
 .select_field{
@@ -13,7 +14,7 @@
 
 .rectangle {
     width: 300px;
-    height: 350px;
+    height: 550px;
     border: 2px solid black;
     box-shadow: 1px 1px black,
                 2px 2px black,
@@ -25,4 +26,8 @@
                 8px 8px black,
                 9px 9px black,
                 10px 10px black;
+}
+
+.selected_position{
+    margin-top: 70%;
 }

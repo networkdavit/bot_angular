@@ -1,16 +1,19 @@
 <div class="bot_position rectangle center_bot_text">
-    <h3>{{greeting}}</h3>
-    <h5>Are you interested in?</h5>
+    <mat-label><img width="100px" height="auto" src="https://www.w3schools.com/howto/img_avatar.png" > </mat-label>
+
+    <h1>{{greeting}}</h1>
+    <h3>Are you interested in?</h3>
+
     <mat-form-field appearance="fill" class="select_field">
         <mat-label>Select an option</mat-label>
-        <mat-select  [(value)]="selected" >
-          <mat-option (click)="test()">None</mat-option>
-          <mat-option (click)="test()" value="Hotels">Hotels</mat-option>
-          <mat-option (click)="test()" value="Adventures">Adventures</mat-option>
-          <mat-option (click)="test()" value="Contact">Contact</mat-option>
+        <mat-select (selectionChange)="show_change()" [(value)]="selected" >
+          <mat-option >None</mat-option>
+          <mat-option *ngFor="let option of options" value="{{option}}">{{option}}</mat-option>
+          <!-- <mat-option  value="Adventures">Adventures</mat-option>
+          <mat-option  value="Contact">Contact</mat-option> -->
         </mat-select >
       </mat-form-field>
       
-      <p>You selected: {{selected}}</p>
+      <p class="selected_position">{{selected}}</p>
 </div>
   
