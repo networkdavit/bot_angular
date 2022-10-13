@@ -1,8 +1,8 @@
 .bot_position {
     margin-left:75%;
-    margin-top: 15%;
+    margin-top: 19%;
     font-size: large;
-  }
+}
 
 .select_field{
     width: 300px;
@@ -31,3 +31,20 @@
 .selected_position{
     margin-top: 70%;
 }
+
+.hidden{
+    position:absolute;
+    bottom:0;
+    background-color: rgba(216, 67, 67, 0.952);
+}
+
+.unhidden{
+    background-color: rgba(21, 172, 231, 0.849);
+    
+}
+
+.button_position{
+    margin-left:27%
+}
+
+

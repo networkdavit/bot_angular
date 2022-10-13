@@ -1,19 +1,22 @@
-<div class="bot_position rectangle center_bot_text">
-    <mat-label><img width="100px" height="auto" src="https://www.w3schools.com/howto/img_avatar.png" > </mat-label>
-
-    <h1>{{greeting}}</h1>
-    <h3>Are you interested in?</h3>
-
-    <mat-form-field appearance="fill" class="select_field">
-        <mat-label>Select an option</mat-label>
-        <mat-select (selectionChange)="show_change()" [(value)]="selected" >
-          <mat-option >None</mat-option>
-          <mat-option *ngFor="let option of options" value="{{option}}">{{option}}</mat-option>
-          <!-- <mat-option  value="Adventures">Adventures</mat-option>
-          <mat-option  value="Contact">Contact</mat-option> -->
-        </mat-select >
-      </mat-form-field>
-      
-      <p class="selected_position">{{selected}}</p>
+<div class="bot_position">
+  <div class="button_position">
+    <button [ngClass]="statusClass" (click)="hide_bot()" value="Hide">{{button_text}}</button>
+  </div>
+  <div *ngIf="!isHidden" >
+      <div class="rectangle center_bot_text">
+        <mat-label><img width="100px" height="auto" src="data:image/jpeg;base64,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" > </mat-label>
+        <h1>{{greeting}}</h1>
+        <h3>Are you interested in?</h3>
+        <mat-form-field appearance="fill" class="select_field">
+            <mat-label>Select an option</mat-label>
+            <mat-select (selectionChange)="show_change()" [(value)]="selected" >
+              <mat-option *ngFor="let option of options" value="{{option}}">{{option}}</mat-option>
+            </mat-select >
+          </mat-form-field>
+          <p class="selected_position">{{selected}}</p>
+      </div>
+  
+  </div>
 </div>
+
   
